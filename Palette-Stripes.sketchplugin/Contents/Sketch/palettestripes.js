@@ -1,8 +1,58 @@
 @import 'universal.js'
 @import 'uiModal.js'
 
+
+var kUUIDKey = 'google.analytics.uuid'
+var uuid = NSUserDefaults.standardUserDefaults().objectForKey(kUUIDKey)
+if (!uuid) {
+  uuid = NSUUID.UUID().UUIDString()
+  NSUserDefaults.standardUserDefaults().setObject_forKey(uuid, kUUIDKey)
+}
+
+function jsonToQueryString(json) {
+  return '?' + Object.keys(json).map(function(key) {
+    return encodeURIComponent(key) + '=' + encodeURIComponent(json[key]);
+  }).join('&')
+}
+
+var index = function (context, trackingId, hitType, props) {
+	var payload = {
+    v: 1,
+		tid: trackingId,
+		ds: 'Sketch%20' + NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString"),
+		cid: uuid,
+    t: hitType,
+    an: context.plugin.name(),
+    aid: context.plugin.identifier(),
+    av: context.plugin.version()
+	}
+	if (props) {
+		Object.keys(props).forEach(function (key) {
+      payload[key] = props[key]
+    })
+	}
+
+	var url = NSURL.URLWithString(
+    NSString.stringWithFormat("https://www.google-analytics.com/collect%@", jsonToQueryString(payload))
+  )
+
+	if (url) {
+    NSURLSession.sharedSession().dataTaskWithURL(url).resume()
+  }
+}
+
+var key = 'UA-101353604-1';
+var sendEvent = function (context, category, action, label) {
+	var payload = {};
+	payload.ec = category;
+	payload.ea = action;
+	return index(context, key, 'event', payload);
+}
+
 var onRun = function( context )
 {	
+	sendEvent(context, 'onRun', 'Plugin triggered');
+
 	// Get page context
 	setContext(context);
 
@@ -19,6 +69,7 @@ var onRun = function( context )
 		if(!fill)
 		{
 			doc.showMessage("Please fill selected layers with color and try again. Cheers!");
+			sendEvent(context, 'Error', 'Please fill selected layers with color and try again.');
 			openModal = 0;
 		} else {
 			var colour = fill.color();
@@ -29,10 +80,12 @@ var onRun = function( context )
     if(openModal == 1) {
 		if(selection.count() < 2){
 			doc.showMessage("Please select at least 2 shapes. Cheers!");
+			sendEvent(context, 'Error', 'Please select at least 2 shapes.');
 		} else if(currentArtboard) {
-			uiModal(context);				
+			uiModal(context);
 		} else {
 			doc.showMessage("Please place shapes inside an artboard. Cheers!");
+			sendEvent(context, 'Error', 'Please place shapes inside an artboard.');
 		}
 	}
 	
