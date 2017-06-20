@@ -14,10 +14,12 @@ Sketch plugin to generate palette stripes from shape fills.
 
 
 ## Examples
-![Super-shapes sample](http://www.sureskumar.com/supershapes/github_imgs/SuperShapes_002_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/supershapes/github_imgs/SuperShapes_004_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/supershapes/github_imgs/SuperShapes_003_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/supershapes/github_imgs/SuperShapes_001_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_001_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_002_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_003_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_004_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_005_888.gif)
+![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_006_888.gif)
 
 ## Contact me
 
