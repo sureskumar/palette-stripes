@@ -3,8 +3,6 @@ Sketch plugin to generate palette stripes from shape fills.
 
 ## Installation
 
-Make sure you have the latest version of Sketch installed. **(Sketch 40+)**
-
 1. [Download the ZIP file of this repository](https://github.com/sureskumar/palette-stripes/archive/master.zip)
 2. Double click on `Palette-Stripes.sketchplugin`
 
