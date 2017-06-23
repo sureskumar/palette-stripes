@@ -62,14 +62,28 @@ var onRun = function( context )
 	var doc = context.document;
     var currentArtboard = doc.currentPage().currentArtboard();
 
+    this.scriptPath = context.scriptPath;
+    this.scriptPathRoot = this.scriptPath.stringByDeletingLastPathComponent();
+    this.scriptResourcesPath = this.scriptPathRoot.stringByDeletingLastPathComponent() + '/Resources';
+    var icon = NSImage.alloc().initByReferencingFile(this.scriptResourcesPath + '/' + "icon.png");
+
+    var showDialog = function(title, informativeText) {
+      var alert = [[NSAlert alloc] init]
+      [alert setMessageText: title]
+      [alert setInformativeText: informativeText]
+      [alert addButtonWithTitle: "OK"] // 1000
+      alert.setIcon(icon);
+      var responseCode = [alert runModal]
+    }
     
     for(var i = 0; i < selection.count(); i++) {
 		var layer = selection[i];
 		var fill = firstVisibleFill(layer);
 		if(!fill)
 		{
-			doc.showMessage("Please fill selected layers with color and try again. Cheers!");
+			//doc.showMessage("Please fill selected layers with color and try again. Cheers!");
 			sendEvent(context, 'Error', 'Please fill selected layers with color and try again.');
+			showDialog("Palette Stripes", "Please fill selected layers with color and try again. Cheers!");
 			openModal = 0;
 		} else {
 			var colour = fill.color();
@@ -79,13 +93,15 @@ var onRun = function( context )
 
     if(openModal == 1) {
 		if(selection.count() < 2){
-			doc.showMessage("Please select at least 2 shapes. Cheers!");
+			//doc.showMessage("Please select at least 2 shapes. Cheers!");
 			sendEvent(context, 'Error', 'Please select at least 2 shapes.');
+			showDialog("Palette Stripes", "Please select at least 2 shapes. Cheers!");
 		} else if(currentArtboard) {
 			uiModal(context);
 		} else {
-			doc.showMessage("Please place shapes inside an artboard. Cheers!");
+			//doc.showMessage("Please place shapes inside an artboard. Cheers!");
 			sendEvent(context, 'Error', 'Please place shapes inside an artboard.');
+			showDialog("Palette Stripes", "Please place shapes inside an artboard. Cheers!");
 		}
 	}
 	
