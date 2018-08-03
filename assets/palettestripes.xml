@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Palette Stripes</title>
+    <link>http://www.sureskumar.com/palettestripes/palettestripes.xml</link>
+    <description>Generate palette stripes in sketch from shape fills.</description>
+    <language>en</language>
+      <item>
+        <title>Version 1.0</title>
+        <description>
+          <![CDATA[
+            <ul>
+            <li>v1.0</li>
+            </ul>
+          ]]>
+        </description>
+        <pubDate>Mon, 19 Jun 2017 11:58:00 +0000</pubDate>
+        <enclosure url="https://github.com/sureskumar/palette-stripes/archive/master.zip" sparkle:version="1.0" length="6,065" type="application/octet-stream" />
+      </item>
+  </channel>
+</rss>

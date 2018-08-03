@@ -1,9 +1,9 @@
-# Palette Stripes `ctrl + shift + P`
+# Palette Stripes v2.0 `ctrl + shift + P`
 Sketch plugin to generate palette stripes from shape fills.
 
 ## Installation
 
-1. [Download the ZIP file of this repository](https://github.com/sureskumar/palette-stripes/archive/master.zip)
+1. [Download the ZIP file of this repository](https://github.com/sureskumar/palette-stripes/blob/master/Palette-Stripes.sketchplugin.zip)
 2. Double click on `Palette-Stripes.sketchplugin`
 
 ## How to use the plugin
@@ -14,12 +14,12 @@ Sketch plugin to generate palette stripes from shape fills.
 
 
 ## Examples
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_005_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_003_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_001_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_002_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_004_888.gif)
-![Super-shapes sample](http://www.sureskumar.com/palettestripes/github_imgs/palettestripes_006_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_005_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_003_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_001_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_002_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_004_888.gif)
+![Super-shapes sample](https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes_006_888.gif)
 
 ## Contact me
 
