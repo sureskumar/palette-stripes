@@ -17,5 +17,17 @@
         <pubDate>Mon, 19 Jun 2017 11:58:00 +0000</pubDate>
         <enclosure url="https://github.com/sureskumar/palette-stripes/archive/master.zip" sparkle:version="1.0" length="6,065" type="application/octet-stream" />
       </item>
+      <item>
+        <title>Version 2.0</title>
+        <description>
+          <![CDATA[
+            <ul>
+            <li>v2.0</li>
+            </ul>
+          ]]>
+        </description>
+        <pubDate>Thu, 02 Aug 2018 11:58:00 +0000</pubDate>
+        <enclosure url="https://github.com/sureskumar/palette-stripes/releases/download/v2.0/Palette-Stripes.sketchplugin.zip" sparkle:version="2.0" length="17184" type="application/octet-stream" />
+      </item>
   </channel>
 </rss>
