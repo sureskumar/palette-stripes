@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Palette Stripes</title>
-    <link>http://www.sureskumar.com/palettestripes/palettestripes.xml</link>
+    <link>https://github.com/sureskumar/palette-stripes/raw/master/assets/palettestripes.xml</link>
     <description>Generate palette stripes in sketch from shape fills.</description>
     <language>en</language>
       <item>
